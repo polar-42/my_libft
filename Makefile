@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fle-tolg <fle-tolg@student.42.fr>          +#+  +:+       +#+         #
+#    By: fle-tolg  <fle-tolg@student.42angouleme    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/27 11:57:23 by fle-tolg          #+#    #+#              #
-#    Updated: 2022/11/26 11:46:00 by fle-tolg         ###   ########.fr        #
+#    Updated: 2023/05/11 14:28:27 by fle-tolg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ END=\033[0m
 
 NAME = libft.a
 
-CFLAGS = -Wextra -Wall -Werror
+CFLAGS = -Wextra -Wall -Werror -I./inc/
 
 CC = clang -g
 
@@ -27,66 +27,66 @@ RM = rm -f
 
 OBJ = $(SRC:.c=.o)
 
-SRC =	ft_isprint.c\
-	ft_putchar_fd.c\
-	ft_strjoin.c\
-	ft_strtrim.c\
-	ft_atoi.c\
-	ft_itoa.c\
-	ft_putendl_fd.c\
-	ft_strlcat.c \
-	ft_substr.c\
-	ft_bzero.c\
-	ft_putnbr_fd.c\
-	ft_strlcpy.c\
-	ft_tolower.c\
-	ft_calloc.c\
-	ft_memchr.c\
-	ft_putstr_fd.c\
-	ft_strlen.c\
-	ft_toupper.c\
-	ft_isalnum.c\
-	ft_memcmp.c\
-	ft_split.c\
-	ft_split_utils.c\
-	ft_strmapi.c\
-	ft_isalpha.c\
-	ft_memcpy.c\
-	ft_strchr.c\
-	ft_strncmp.c\
-	ft_isascii.c\
-	ft_memmove.c\
-	ft_strdup.c\
-	ft_strnstr.c\
-	ft_isdigit.c\
-	ft_memset.c\
-	ft_striteri.c\
-	ft_strrchr.c\
-	ft_strchr_char.c\
-	ft_lstnew.c\
-	ft_lstadd_back.c\
-	ft_lstsize.c\
-	ft_lstadd_front.c\
-	ft_lstdelone.c\
-	ft_lstclear.c\
-	ft_lstiter.c\
-	ft_lstlast.c\
-	ft_lstmap.c\
-	db_lstnew.c\
-	db_lstadd_back.c\
-	db_lstsize.c\
-	db_lstadd_front.c\
-	db_lstdelone.c\
-	db_lstclear.c\
-	db_lstlast.c\
-	db_lstfirst.c\
-	ft_putnbr_base_fd.c\
-	ft_printf.c\
-	ft_printf_utils.c\
-	ft_fprintf.c\
-	ft_fprintf_utils.c\
-	get_next_line.c\
-	get_next_line_zero.c
+SRC =	src/ft_isprint.c\
+	src/ft_putchar_fd.c\
+	src/ft_strjoin.c\
+	src/ft_strtrim.c\
+	src/ft_atoi.c\
+	src/ft_itoa.c\
+	src/ft_putendl_fd.c\
+	src/ft_strlcat.c \
+	src/ft_substr.c\
+	src/ft_bzero.c\
+	src/ft_putnbr_fd.c\
+	src/ft_strlcpy.c\
+	src/ft_tolower.c\
+	src/ft_calloc.c\
+	src/ft_memchr.c\
+	src/ft_putstr_fd.c\
+	src/ft_strlen.c\
+	src/ft_toupper.c\
+	src/ft_isalnum.c\
+	src/ft_memcmp.c\
+	src/ft_split.c\
+	src/ft_split_utils.c\
+	src/ft_strmapi.c\
+	src/ft_isalpha.c\
+	src/ft_memcpy.c\
+	src/ft_strchr.c\
+	src/ft_strncmp.c\
+	src/ft_isascii.c\
+	src/ft_memmove.c\
+	src/ft_strdup.c\
+	src/ft_strnstr.c\
+	src/ft_isdigit.c\
+	src/ft_memset.c\
+	src/ft_striteri.c\
+	src/ft_strrchr.c\
+	src/ft_strchr_char.c\
+	src/ft_lstnew.c\
+	src/ft_lstadd_back.c\
+	src/ft_lstsize.c\
+	src/ft_lstadd_front.c\
+	src/ft_lstdelone.c\
+	src/ft_lstclear.c\
+	src/ft_lstiter.c\
+	src/ft_lstlast.c\
+	src/ft_lstmap.c\
+	src/db_lstnew.c\
+	src/db_lstadd_back.c\
+	src/db_lstsize.c\
+	src/db_lstadd_front.c\
+	src/db_lstdelone.c\
+	src/db_lstclear.c\
+	src/db_lstlast.c\
+	src/db_lstfirst.c\
+	src/ft_putnbr_base_fd.c\
+	src/ft_printf.c\
+	src/ft_printf_utils.c\
+	src/ft_fprintf.c\
+	src/ft_fprintf_utils.c\
+	src/get_next_line.c\
+	src/get_next_line_zero.c
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c -o $@ $<
